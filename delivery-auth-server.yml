@@ -26,14 +26,14 @@ security:
 spring:
     datasource:
         data: classpath:/sql/data.sql
-        driver-class-name: oracle.jdbc.OracleDriver
-        password: 'system'
-        platform: oracle
+        driver-class-name: com.mysql.jdbc.Driver
+        password: 'root'
+        platform: mysql
         schema: classpath:/sql/schema.sql
-        url: jdbc:oracle:thin:localhost:1521/XE
-        username: system
+        url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        username: root
     jpa:
-        database-platform: org.hibernate.dialect.Oracle10gDialect
+        database-platform: org.hibernate.dialect.MySQLDialect
         generate-ddl: false
         hibernate:
             ddl-auto: none
